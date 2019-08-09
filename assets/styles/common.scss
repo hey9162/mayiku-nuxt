@@ -1,0 +1,260 @@
+
+// 定义常用的类
+@for $i from 1 through 20 {
+  // 字体大小 .f8 - f20
+  @if ($i >= 8) {
+    .f#{$i} {
+      font-size: ($i * 1px);
+    }
+  }
+  // 左外边距 .ml1 - .ml20 下同
+  .ml#{$i} {
+    margin-left: ($i * 1px);
+  }
+  // 右外边距
+  .mr#{$i} {
+    margin-right: ($i * 1px);
+  }
+  // 上外边距
+  .mt#{$i} {
+    margin-top: ($i * 1px);
+  }
+  // 下外边距
+  .mb#{$i} {
+    margin-bottom: ($i * 1px);
+  }
+  // 做内边距
+  .pl#{$i} {
+    padding-left: ($i * 1px);
+  }
+  // 右内边距
+  .pr#{$i} {
+    padding-right: ($i * 1px);
+  }
+  // 上内边距
+  .pt#{$i} {
+    padding-top: ($i * 1px);
+  }
+  // 下内边距
+  .pb#{$i} {
+    padding-bottom: ($i * 1px);
+  }
+}
+// 行内元素水平居中
+.text-c {
+  text-align: center;
+}
+// 行内块元素
+.inline {
+  display: inline-block;
+}
+// 超出显示省略号
+.ell {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.dx_captcha{
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+::-webkit-scrollbar 
+{ 
+    width: 6px; 
+    height: 6px; 
+    background-color: #F5F5F5; 
+} 
+   
+/*定义滚动条轨道 内阴影+圆角*/ 
+::-webkit-scrollbar-track 
+{ 
+    border-radius: 4px; 
+    background-color: #F5F5F5; 
+} 
+   
+/*定义滑块 内阴影+圆角*/ 
+::-webkit-scrollbar-thumb 
+{ 
+    border-radius: 4px; 
+    background-color: rgba(144,147,153,.3);; 
+}
+*{
+  box-sizing: border-box;
+  margin: 0;
+}
+img{
+  border: none;
+}
+ul{
+  padding: 0;
+}
+ul li{
+  list-style: none;
+}
+dl {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+dt,
+dd {
+  line-height: 1.42857143;
+}
+dd {
+  margin-left: 0;
+}
+.hide{
+  display: none;
+}
+.red{
+  color: #fd0000;
+}
+.show{
+  display: block;
+}
+.t-center{
+  text-align: center;
+}
+.navbar-brand:hover, a, a:focus, a:hover {
+  text-decoration: none;
+  color: #4A4A4A;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+a,button{
+  -webkit-tap-highlight-color:rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent;
+  outline:none;
+  background: none;
+  text-decoration: none;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+button{
+  text-decoration: none;
+  outline: none;
+}
+.router-link-active {
+  text-decoration: none;
+}
+body{
+  margin: 0;
+  color: #4A4A4A;
+  min-height: 100%;
+  font-size: .875rem;
+  background-color: #f2f2f5;
+}
+.clearfix::after,.form-group::after{
+  content: "";
+  display: table;
+  clear: both;
+}
+.inline-block{display: inline-block;}
+a:focus{
+  outline: none;
+}
+.middle-container{
+  min-height: calc( 100vh - 128px );
+  background-color: #f2f2f5;
+}
+.layout-container {
+  // position: relative;
+  display: block;
+  margin: 0 auto;
+  max-width: 1200px;
+  &::after{
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+.pull-left,.fl{
+  float: left;
+}
+.pull-right,.fr{
+  float: right;
+}
+.center{
+  text-align: center
+}
+.account-container{
+  width: 430px;
+  padding-top: 96px;
+  margin: auto;
+}
+
+.operation{
+  width: 70%;
+  padding-right: 20px;
+  .make-box{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+}
+.showreg{
+  padding-left: 20px;
+  width: 30%;
+}
+
+/**/
+.header .ant-menu-horizontal{
+  margin-top: 6px;
+  line-height: 30px;
+}
+.ant-menu-horizontal > .ant-menu-item, .ant-menu-horizontal > .ant-menu-submenu{
+  margin-right: 30px;
+  padding: 0 10px;
+}
+
+/**/
+.inp-group{
+  input{
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    background-color: transparent;
+    border-radius: 0;
+    padding-left: 40px;
+  }
+  &.suffix{
+    span.el-input__suffix{
+      right: 104px;
+    }
+  }
+  position: relative;
+  text-align: left;
+  margin-bottom: 10px;
+  .right-btn{
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    color: #ffffff;
+    a{
+      color: #ffffff;
+    }
+    ::before{
+      position: absolute;
+      left: -20px;
+      top: 7px;
+      content: '';
+      width: 1px;
+      height: 16px;
+      display: block;
+      background-color: transparent;
+    }
+  }
+}
+.full-btn{
+  width: 50%;
+  display: block;
+  margin: 0 auto;
+}
+.el-badge__content{
+  height: 20px;
+}

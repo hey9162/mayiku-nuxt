@@ -1,0 +1,23 @@
+@media only screen and (max-width: 767px) {
+  .show-xs-only {
+      display:block!important
+  }
+  .layout-container {
+    display: block;
+    margin: 0 auto;
+    padding: 0 15px;
+    width: 100%;
+    &::after{
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }
+  .header{
+    background-position: initial !important;
+  }
+  .middle-container{
+    min-height: calc( 100vh - 84px);
+    padding-top: 70px;
+  }
+}
